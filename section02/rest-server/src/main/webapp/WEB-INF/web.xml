@@ -12,6 +12,16 @@
 
     <servlet-mapping>
         <servlet-name>BasicServlet</servlet-name>
-        <url-pattern>/</url-pattern>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SecondServlet</servlet-name>
+        <servlet-class>com.bernasky.rest.SecondServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SecondServlet</servlet-name>
+        <url-pattern>/second</url-pattern>
     </servlet-mapping>
 </web-app>
