@@ -4,7 +4,7 @@
 	<groupId>com.bernasky.rest</groupId>
 	<artifactId>rest-server</artifactId>
 	<version>0.1.0</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>rest-server</name>
 
@@ -22,6 +22,16 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>9.4.12.v20180830</version>
+			</plugin>
+		</plugins>
+	</build>
 
 	<dependencies>
 		<dependency>
