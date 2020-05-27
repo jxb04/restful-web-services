@@ -10,8 +10,9 @@ public class BasicServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        String name = req.getHeader("Custom-Name");
         resp.setStatus(200);
-        resp.getOutputStream().println("Hello, world!");
+        resp.getOutputStream().println(name != null ? "Hello, " + name : "Hello, world! " + name);
     }
 
     @Override

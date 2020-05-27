@@ -11,7 +11,8 @@ public class SecondServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         resp.setStatus(200);
-        resp.getOutputStream().println("Second Servlet");
+        resp.setHeader("Content-Type", "application/json");
+        resp.getOutputStream().println("{\"name\": \"Joel\" }");
     }
 
 }
